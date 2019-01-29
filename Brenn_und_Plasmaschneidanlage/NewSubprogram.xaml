@@ -1,0 +1,71 @@
+﻿<Window x:Class="Brenn_und_Plasmaschneidanlage.NewSubprogram"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Brenn_und_Plasmaschneidanlage"
+        mc:Ignorable="d"
+        Title="Neues Unterprogramm" Height="270" MaxHeight="270" MinWidth="200" Width="800" Icon="Icons/path4716-0.png" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,10,0,5">
+            <Button x:Name="btnCancel" Margin="10,0,5,0" Width="80" Click="BtnCancle_Click" TabIndex="8">Abbruch</Button>
+            <Button x:Name="btnOK" Margin="5,0,3,0" Width="80" TabIndex="7" Click="BtnOK_Click" IsEnabled="False">OK</Button>
+        </StackPanel>
+
+        <DockPanel DockPanel.Dock="Top">
+            <StackPanel DockPanel.Dock="Top">
+                <RadioButton x:Name="rbNewSub" GroupName="a" IsChecked="True" Margin="10,10,0,0" Checked="RbNewSub_Checked">Neues Unterprogramm erstellen</RadioButton>
+                <RadioButton x:Name="rbExistingSub" GroupName="a" Margin="10,10,0,0" Checked="RbExistingSub_Checked">Vorhandes Unterprogramm hinzufügen</RadioButton>
+            </StackPanel>
+
+            <GroupBox x:Name="gbContent" Margin="5,10,5,0" Header="Neues Unterprogramm" DockPanel.Dock="Top">
+                <StackPanel>
+                    <Label Margin="5">Unterprogramm:</Label>
+                    <DockPanel>
+                        <Button x:Name="btnSearch" DockPanel.Dock="Right" Width="80" Margin="10,0,5,0" Visibility="Collapsed" Click="BtnSearch_Click" Height="20">Durchsuchen</Button>
+                        <TextBox x:Name="txtContent" IsReadOnly="{Binding ElementName=rbExistingSub, Path=IsChecked}" TextChanged="TxtContent_TextChanged" Margin="11,0,0,0" DockPanel.Dock="Left" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Hidden" VerticalContentAlignment="Stretch" Height="20"/>
+                    </DockPanel>
+
+                    <RadioButton x:Name="rbImport" IsEnabled="{Binding ElementName=rbExistingSub, Path=IsChecked}" GroupName="b" IsChecked="True" Margin="10,10,0,0">Importieren</RadioButton>
+                    <RadioButton x:Name="rbShortcut" GroupName="b" Margin="10,10,0,0" IsEnabled="{Binding ElementName=rbExistingSub, Path=IsChecked}" >Verknüpfen</RadioButton>
+                </StackPanel>
+            </GroupBox>
+
+            <StackPanel DockPanel.Dock="Bottom">
+                
+            </StackPanel>
+            
+        </DockPanel>
+        
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <RadioButton GroupName="a" IsChecked="True" Margin="10,10,0,0">Neues Unterprogramm erstellen</RadioButton>
+                <RadioButton GroupName="a" Margin="10,10,0,0">Vorhandes Unterprogramm hinzufügen</RadioButton>
+            </StackPanel>
+            
+            
+            
+            
+            
+            --><!--<GroupBox Grid.Row="1" Header="Neues Unterprogramm erstellen">
+                <TextBox Height="20"/>
+            </GroupBox>
+            <GroupBox Grid.Row="2" Header="Vorhandenes Unterprogramm hinzufügen" IsEnabled="True">
+                <StackPanel>
+                    <Label>Unterprogramm:</Label>
+                    <DockPanel>
+                        <Button DockPanel.Dock="Right" Width="80" Margin="10,0,5,0">Durchsuchen</Button>
+                        <TextBox Margin="6,0,0,0" DockPanel.Dock="Left"/>
+                    </DockPanel>
+                </StackPanel>
+            </GroupBox>--><!--
+        </Grid>-->
+        
+    </DockPanel>
+</Window>

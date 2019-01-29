@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Brenn_und_Plasmaschneidanlage.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="fontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="standardDirectoryPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\Michael\Documents\</Value>
+    </Setting>
+    <Setting Name="subProgramDirectoryPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\Michael\Documents\Visual Studio 2017\Projects\DA8_BUPSA\Brenn_und_Plasmaschneidanlage\Unterprogramme\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
